@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32e8b886-b2d5-46ed-ad8f-a0fb4d65550f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YcSc6IJ3TXc1Ws9VYB2wrpx0YV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AROB_BeispielNetz/bak.py" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AROB_BeispielNetz" />
+      <recent name="$PROJECT_DIR$/python" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.example">
+    <configuration name="CartesianTrajectoryGenerator" type="PythonConfigurationType" factoryName="Python">
+      <module name="vorlesung" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/CartesianTrajectoryGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ImageClassifier" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="vorlesung" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AROB_BeispielNetz" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/ImageClassifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TrajectoryGenerator" type="PythonConfigurationType" factoryName="Python">
+      <module name="vorlesung" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/AxisTrajectoryGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="example" type="PythonConfigurationType" factoryName="Python">
+      <module name="vorlesung" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/example.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.example" />
+      <item itemvalue="Python.TrajectoryGenerator" />
+      <item itemvalue="Python.CartesianTrajectoryGenerator" />
+      <item itemvalue="Python.ImageClassifier" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32e8b886-b2d5-46ed-ad8f-a0fb4d65550f" name="Default Changelist" comment="" />
+      <created>1583240465791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583240465791</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3047" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586856757725">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="596" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1585912404750" />
+    <state x="3047" y="358" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.5062.1337@0.25.5062.1337" timestamp="1586856757725" />
+    <state x="2047" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog/58.0.5062.1440@58.0.5062.1440" timestamp="1583310797453" />
+    <state x="3529" y="443" width="526" height="496" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587114923377">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="3529" y="443" width="526" height="496" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.5062.1337@0.25.5062.1337" timestamp="1587114923377" />
+    <state x="678" y="170" width="560" height="764" key="#joint_publisher" timestamp="1585827265242">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="678" y="170" width="560" height="764" key="#joint_publisher/0.25.1680.1025@0.25.1680.1025" timestamp="1585827265242" />
+    <state x="1160" y="230" width="426" height="479" key="FileChooserDialogImpl" timestamp="1586259721962">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="385" y="182" width="426" height="479" key="FileChooserDialogImpl/0.25.1680.1025@0.25.1680.1025" timestamp="1585830599239" />
+    <state x="1160" y="230" width="426" height="479" key="FileChooserDialogImpl/0.25.5062.1337@0.25.5062.1337" timestamp="1586259721962" />
+    <state x="463" y="165" width="932" height="791" key="FileChooserDialogImpl/30.0.1890.1080@30.0.1890.1080" timestamp="1584008609077" />
+    <state x="2373" y="478" key="FileChooserDialogImpl/58.0.5062.1440@58.0.5062.1440" timestamp="1583240529309" />
+    <state width="2486" height="400" key="GridCell.Tab.0.bottom" timestamp="1587120744005">
+      <screen x="0" y="25" width="2527" height="1337" />
+    </state>
+    <state width="1647" height="293" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1586857248016" />
+    <state width="1639" height="274" key="GridCell.Tab.0.bottom/0.25.1680.973@0.25.1680.973" timestamp="1587109067058" />
+    <state width="920" height="274" key="GridCell.Tab.0.bottom/0.25.1890.977@0.25.1890.977" timestamp="1587112372583" />
+    <state width="2486" height="400" key="GridCell.Tab.0.bottom/0.25.2527.1337@0.25.2527.1337" timestamp="1587120744005" />
+    <state width="2506" height="400" key="GridCell.Tab.0.bottom/0.25.5062.1337@0.25.5062.1337" timestamp="1587115464883" />
+    <state width="1859" height="251" key="GridCell.Tab.0.bottom/58.0.5062.1440@58.0.5062.1440" timestamp="1583835143889" />
+    <state width="2486" height="400" key="GridCell.Tab.0.center" timestamp="1587120744004">
+      <screen x="0" y="25" width="2527" height="1337" />
+    </state>
+    <state width="1647" height="293" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1586857248015" />
+    <state width="1639" height="274" key="GridCell.Tab.0.center/0.25.1680.973@0.25.1680.973" timestamp="1587109067056" />
+    <state width="920" height="274" key="GridCell.Tab.0.center/0.25.1890.977@0.25.1890.977" timestamp="1587112372581" />
+    <state width="2486" height="400" key="GridCell.Tab.0.center/0.25.2527.1337@0.25.2527.1337" timestamp="1587120744004" />
+    <state width="2506" height="400" key="GridCell.Tab.0.center/0.25.5062.1337@0.25.5062.1337" timestamp="1587115464882" />
+    <state width="1859" height="251" key="GridCell.Tab.0.center/58.0.5062.1440@58.0.5062.1440" timestamp="1583835143889" />
+    <state width="2486" height="400" key="GridCell.Tab.0.left" timestamp="1587120744003">
+      <screen x="0" y="25" width="2527" height="1337" />
+    </state>
+    <state width="1647" height="293" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1586857248015" />
+    <state width="1639" height="274" key="GridCell.Tab.0.left/0.25.1680.973@0.25.1680.973" timestamp="1587109067051" />
+    <state width="920" height="274" key="GridCell.Tab.0.left/0.25.1890.977@0.25.1890.977" timestamp="1587112372580" />
+    <state width="2486" height="400" key="GridCell.Tab.0.left/0.25.2527.1337@0.25.2527.1337" timestamp="1587120744003" />
+    <state width="2506" height="400" key="GridCell.Tab.0.left/0.25.5062.1337@0.25.5062.1337" timestamp="1587115464881" />
+    <state width="1859" height="251" key="GridCell.Tab.0.left/58.0.5062.1440@58.0.5062.1440" timestamp="1583835143889" />
+    <state width="2486" height="400" key="GridCell.Tab.0.right" timestamp="1587120744005">
+      <screen x="0" y="25" width="2527" height="1337" />
+    </state>
+    <state width="1647" height="293" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1586857248016" />
+    <state width="1639" height="274" key="GridCell.Tab.0.right/0.25.1680.973@0.25.1680.973" timestamp="1587109067057" />
+    <state width="920" height="274" key="GridCell.Tab.0.right/0.25.1890.977@0.25.1890.977" timestamp="1587112372582" />
+    <state width="2486" height="400" key="GridCell.Tab.0.right/0.25.2527.1337@0.25.2527.1337" timestamp="1587120744005" />
+    <state width="2506" height="400" key="GridCell.Tab.0.right/0.25.5062.1337@0.25.5062.1337" timestamp="1587115464882" />
+    <state width="1859" height="251" key="GridCell.Tab.0.right/58.0.5062.1440@58.0.5062.1440" timestamp="1583835143889" />
+    <state width="1600" height="325" key="GridCell.Tab.1.bottom" timestamp="1585833005636">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1600" height="325" key="GridCell.Tab.1.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1585833005636" />
+    <state width="2504" height="498" key="GridCell.Tab.1.bottom/58.0.5062.1440@58.0.5062.1440" timestamp="1583242771102" />
+    <state width="1600" height="325" key="GridCell.Tab.1.center" timestamp="1585833005632">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1600" height="325" key="GridCell.Tab.1.center/0.25.1680.1025@0.25.1680.1025" timestamp="1585833005632" />
+    <state width="2504" height="498" key="GridCell.Tab.1.center/58.0.5062.1440@58.0.5062.1440" timestamp="1583242771102" />
+    <state width="1600" height="325" key="GridCell.Tab.1.left" timestamp="1585833005632">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1600" height="325" key="GridCell.Tab.1.left/0.25.1680.1025@0.25.1680.1025" timestamp="1585833005632" />
+    <state width="2504" height="498" key="GridCell.Tab.1.left/58.0.5062.1440@58.0.5062.1440" timestamp="1583242771101" />
+    <state width="1600" height="325" key="GridCell.Tab.1.right" timestamp="1585833005634">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1600" height="325" key="GridCell.Tab.1.right/0.25.1680.1025@0.25.1680.1025" timestamp="1585833005634" />
+    <state width="2504" height="498" key="GridCell.Tab.1.right/58.0.5062.1440@58.0.5062.1440" timestamp="1583242771102" />
+    <state x="867" y="227" key="SettingsEditor" timestamp="1586855605090">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="288" y="180" key="SettingsEditor/0.25.1680.1025@0.25.1680.1025" timestamp="1585834694223" />
+    <state x="433" y="227" key="SettingsEditor/0.25.2527.1337@0.25.2527.1337" timestamp="1585923142290" />
+    <state x="867" y="227" key="SettingsEditor/0.25.5062.1337@0.25.5062.1337" timestamp="1586855605090" />
+    <state x="2086" y="355" key="SettingsEditor/58.0.5062.1440@58.0.5062.1440" timestamp="1583310708827" />
+    <state x="333" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1585912320592">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="333" y="320" key="com.intellij.ide.util.TipDialog/0.25.1280.935@0.25.1280.935" timestamp="1585826695816" />
+    <state x="333" y="320" key="com.intellij.ide.util.TipDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1585912320592" />
+    <state x="873" y="613" width="382" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586358810514">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="436" y="613" width="382" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.2527.1337@0.25.2527.1337" timestamp="1585926655389" />
+    <state x="873" y="613" width="382" height="155" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.5062.1337@0.25.5062.1337" timestamp="1586358810514" />
+    <state x="3482" y="314" width="628" height="759" key="find.popup" timestamp="1586336367123">
+      <screen x="0" y="25" width="5062" height="1337" />
+    </state>
+    <state x="3482" y="314" width="628" height="759" key="find.popup/0.25.5062.1337@0.25.5062.1337" timestamp="1586336367123" />
+    <state x="926" y="328" width="672" height="678" key="search.everywhere.popup" timestamp="1586853000553">
+      <screen x="0" y="25" width="2527" height="1337" />
+    </state>
+    <state x="926" y="328" width="672" height="678" key="search.everywhere.popup/0.25.2527.1337@0.25.2527.1337" timestamp="1586853000553" />
+    <state x="1855" y="328" width="1347" height="678" key="search.everywhere.popup/0.25.5062.1337@0.25.5062.1337" timestamp="1586335698125" />
+  </component>
+</project>
