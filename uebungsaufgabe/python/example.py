@@ -1,9 +1,13 @@
 #!/usr/bin/env python2
+import time
 
 from CoppeliaSimConnector import CoppeliaSimConnector
 from IIwaKinematics import IIwaKinematics
 import PyKDL
 import numpy as np
+
+import rospy
+from std_msgs.msg import Bool
 
 connector = CoppeliaSimConnector()
 kin = IIwaKinematics(connector)
@@ -17,7 +21,24 @@ def transform_to_kdl(t):
                                     t.transform.translation.z))
 
 
+def sensor_callback(data):
+    global objectDetected
+    objectDetected = data.data
+
+
+objectDetected = False
+sensor = rospy.Subscriber('/objectDetected', Bool, sensor_callback)
+gripper = rospy.Publisher('/gripperClosing', Bool, queue_size=2, latch=False)
+i=0
+
 while True:
+    if i == 5:
+        gripper.publish(True)
+    if i >= 10:
+        gripper.publish(False)
+        i = 0
+    i = i + 1
+
     rot = PyKDL.Rotation()
     rot.DoRotX(-np.pi)
 
