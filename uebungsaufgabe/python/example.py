@@ -24,6 +24,7 @@ def transform_to_kdl(t):
 def sensor_callback(data):
     global objectDetected
     objectDetected = data.data
+    print("Object detected: ", objectDetected)
 
 
 objectDetected = False
@@ -42,10 +43,29 @@ while True:
     rot = PyKDL.Rotation()
     rot.DoRotX(-np.pi)
 
-    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.5, -0.5, 0.5)))
+    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.32, -0.5, 0.5)))
 
-    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.5, 0.5)), 1)
+    for i in xrange(25):
+        connector.step()
+    while not objectDetected:
+        connector.step()
+    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.32, -0.5, 0.15)), 1)
+    for i in xrange(35):
+        connector.step()
+    gripper.publish(True)
+    for i in xrange(15):
+        connector.step()
+    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.1, -0.5, 0.5)), 0.01)
+    for i in xrange(15):
+        connector.step()
+    gripper.publish(False)
+    for i in xrange(10):
+        connector.step()
 
-    rot.DoRotZ(+np.pi)
+    #time.sleep(10)
 
-    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0, 0.5)))
+    #kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.5, 0.5)), 1)
+
+    #rot.DoRotZ(+np.pi)
+
+    #kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0, 0.5)))
