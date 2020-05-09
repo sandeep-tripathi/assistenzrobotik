@@ -1,7 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32e8b886-b2d5-46ed-ad8f-a0fb4d65550f" name="Default Changelist" comment="" />
+    <list default="true" id="32e8b886-b2d5-46ed-ad8f-a0fb4d65550f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/template_uebungsaufgabe.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vorlesung.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/nagel9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/schraube9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe29.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/textures/unterlegscheibe9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scene/vorlesung.ttt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/AxisTrajectoryGenerator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/CartesianTrajectoryGenerator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/CoppeliaSimConnector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/IIwaKinematics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/KdlHelpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/example.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +127,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1YcSc6IJ3TXc1Ws9VYB2wrpx0YV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -25,8 +137,9 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AROB_BeispielNetz/bak.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
@@ -125,10 +238,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.example" />
-      <item itemvalue="Python.TrajectoryGenerator" />
       <item itemvalue="Python.CartesianTrajectoryGenerator" />
       <item itemvalue="Python.ImageClassifier" />
+      <item itemvalue="Python.TrajectoryGenerator" />
+      <item itemvalue="Python.example" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -159,10 +272,11 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="678" y="170" width="560" height="764" key="#joint_publisher/0.25.1680.1025@0.25.1680.1025" timestamp="1585827265242" />
-    <state x="1160" y="230" width="426" height="479" key="FileChooserDialogImpl" timestamp="1586259721962">
-      <screen x="0" y="25" width="5062" height="1337" />
+    <state x="419" y="160" width="319" height="316" key="FileChooserDialogImpl" timestamp="1589011980524">
+      <screen x="0" y="25" width="1828" height="880" />
     </state>
     <state x="385" y="182" width="426" height="479" key="FileChooserDialogImpl/0.25.1680.1025@0.25.1680.1025" timestamp="1585830599239" />
+    <state x="419" y="160" width="319" height="316" key="FileChooserDialogImpl/0.25.1828.880@0.25.1828.880" timestamp="1589011980524" />
     <state x="1160" y="230" width="426" height="479" key="FileChooserDialogImpl/0.25.5062.1337@0.25.5062.1337" timestamp="1586259721962" />
     <state x="463" y="165" width="932" height="791" key="FileChooserDialogImpl/30.0.1890.1080@30.0.1890.1080" timestamp="1584008609077" />
     <state x="2373" y="478" key="FileChooserDialogImpl/58.0.5062.1440@58.0.5062.1440" timestamp="1583240529309" />
