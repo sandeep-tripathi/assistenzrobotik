@@ -24,48 +24,33 @@ def transform_to_kdl(t):
 def sensor_callback(data):
     global objectDetected
     objectDetected = data.data
-    print("Object detected: ", objectDetected)
 
 
 objectDetected = False
 sensor = rospy.Subscriber('/objectDetected', Bool, sensor_callback)
 gripper = rospy.Publisher('/gripperClosing', Bool, queue_size=2, latch=False)
-i=0
+
+rot = PyKDL.Rotation()
+rot.DoRotX(-np.pi)
 
 while True:
-    if i == 5:
-        gripper.publish(True)
-    if i >= 10:
-        gripper.publish(False)
-        i = 0
-    i = i + 1
+    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.19)), 1.0)
+    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.13)), 1.0)
 
-    rot = PyKDL.Rotation()
-    rot.DoRotX(-np.pi)
-
-    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.32, -0.5, 0.5)))
-
-    for i in xrange(25):
-        connector.step()
     while not objectDetected:
         connector.step()
-    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.32, -0.5, 0.15)), 1)
-    for i in xrange(35):
-        connector.step()
     gripper.publish(True)
-    for i in xrange(15):
+    for i in xrange(2):
         connector.step()
-    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.1, -0.5, 0.5)), 0.01)
-    for i in xrange(15):
-        connector.step()
+
+    # speed is not working with lin() ?!
+
+    # Standalone sink
+    #kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.8)
+    #kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0.45, 0.25)), 1.0)
+    # Sink at the end of the conveyor
+    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.8)
+    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.48, 0.225)), 1.0)
+
     gripper.publish(False)
-    for i in xrange(10):
-        connector.step()
 
-    #time.sleep(10)
-
-    #kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.5, 0.5)), 1)
-
-    #rot.DoRotZ(+np.pi)
-
-    #kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0, 0.5)))
