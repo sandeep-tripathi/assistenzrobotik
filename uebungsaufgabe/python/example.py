@@ -46,11 +46,11 @@ while True:
     # speed is not working with lin() ?!
 
     # Standalone sink
-    #kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.8)
-    #kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0.45, 0.25)), 1.0)
+    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.1)
+    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.5, 0.45, 0.25)), 0.3)
     # Sink at the end of the conveyor
-    kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.8)
-    kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.48, 0.225)), 1.0)
+    #kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 0.8)
+    #kin.lin(PyKDL.Frame(rot, PyKDL.Vector(0.0, -0.48, 0.225)), 1.0)
 
     gripper.publish(False)
 
