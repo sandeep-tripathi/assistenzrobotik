@@ -61,10 +61,10 @@ def surveillance_callback(image_msg):
 
             if value > 127:  # definitively new pixels
                 if belongs_to_robot(x, y):
-                    robot[x][y] = robot[x][y] + 5.0
+                    robot[x][y] = min(robot[x][y] + 5.0, 8.0)
                     human[x][y] = 0.0
                 elif not neutral:
-                    human[x][y] = human[x][y] + 5.0
+                    human[x][y] = min(human[x][y] + 5.0, 8.0)
                     robot[x][y] = 0.0
             elif value < 127:  # definitively removed pixels
                 robot[x][y] = 0.0
