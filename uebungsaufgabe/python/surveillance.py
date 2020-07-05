@@ -1,17 +1,10 @@
-robot = []
-human = []
-
-for x in range(0, 128):
-    robot[x] = []
-    human[x] = []
-    for y in range(0, 128):
-        robot[x][y] = 0
-        human[x][y] = 0
+robot = [[0] * 128] * 128
+human = [[0] * 128] * 128
 
 def belongs_to_robot(x, y):
     global robot, human
     if 123 <= x <= 150 and 123 <= y <= 150:
-        return True # Fixed robot area in the center
+        return True # TODO: Fixed robot area in the center
     if robot[x][y] > 0:
         return True # The pixel itself already belongs to the robot
     if (x < 127 and robot[x+1][y]) > 0 or (y < 127 and robot[x][y+1] > 0) or (x > 0 and robot[x-1][y]) > 0 or (y > 0 and robot[x][y-1] > 0):
@@ -72,3 +65,5 @@ def surveillance_callback(image_msg):
                 human[x][y] = 0
             if robot[x][y] < 0:
                 robot[x][y] = 0
+
+    #for x in range(0, 128):
