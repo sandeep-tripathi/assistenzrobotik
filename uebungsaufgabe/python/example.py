@@ -6,13 +6,14 @@ from IIwaKinematics import IIwaKinematics
 from TensorflowModel import TFmodel
 import PyKDL
 import numpy as np
+import surveillance
 
 import matplotlib.pyplot as plt
 
 from cv_bridge import CvBridge, CvBridgeError
 
 import rospy
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, ByteMultiArray
 from sensor_msgs.msg import Image
 
 connector = CoppeliaSimConnector()
@@ -40,12 +41,12 @@ def image_callback(image_msg):
     plt.imshow(image)
     imageRecieved = True
 
-
 objectDetected = False
 imageRecieved = False
 sensor = rospy.Subscriber('/objectDetected', Bool, sensor_callback)
 gripper = rospy.Publisher('/gripperClosing', Bool, queue_size=2, latch=False)
 image = rospy.Subscriber('/cameraVision', Image, image_callback)
+surveillance = rospy.Subscriber('/surveillance', Image, surveillance.surveillance_callback)
 
 rot = PyKDL.Rotation()
 rot.DoRotX(-np.pi)
