@@ -76,7 +76,7 @@ def surveillance_callback(image_msg):
         for x in xrange(0, 128):
             x = 127 - x
             if human[x][y] > 0 and belongs_to_robot(x, y):
-                robot[x][y] += 5.0
+                robot[x][y] = min(robot[x][y] + 5.0, 8.0)
                 human[x][y] = 0.0
             robot[x][y] = max(0, robot[x][y] - 0.5)
             human[x][y] = max(0, human[x][y] - 0.5)
@@ -88,23 +88,13 @@ def surveillance_callback(image_msg):
                 continue
             s += ("  " if y < 10 else " " if y < 100 else "") + str(y)
             for x in xrange(0, 128):
-                if robot[x][y] > 0 and robot[x][y+1] > 0 and human[x][y] > 0 and human[x][y+1] > 0:
-                    s += "#" # Collision on both
-                elif robot[x][y] == 0 and robot[x][y+1] > 0 and human[x][y] == 0 and human[x][y+1] > 0:
-                    s += "#" # Collision bottom
-                elif robot[x][y] > 0 and robot[x][y+1] == 0 and human[x][y] > 0 and human[x][y+1] == 0:
-                    s += "#" # Collision top
-                elif robot[x][y] > 0 and robot[x][y+1] > 0:
+                if robot[x][y] > 4 or robot[x][y+1] > 4:
+                    s += "R"
+                elif robot[x][y] > 0 or robot[x][y+1] > 0:
                     s += "r"
-                elif robot[x][y] > 0 and robot[x][y+1] == 0:
-                    s += "r"
-                elif robot[x][y] == 0 and robot[x][y+1] > 0:
-                    s += "r"
-                elif human[x][y] > 0 and human[x][y+1] > 0:
-                    s += "."
-                elif human[x][y] > 0 and human[x][y + 1] == 0:
-                    s += "."
-                elif human[x][y] == 0 and human[x][y + 1] > 0:
+                elif human[x][y] > 4 or human[x][y+1] > 4:
+                    s += "!"
+                elif human[x][y] > 0 or human[x][y+1] > 0:
                     s += "."
                 else:
                     s += " "
