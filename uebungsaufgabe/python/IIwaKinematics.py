@@ -13,6 +13,7 @@ from sensor_msgs.msg import JointState
 from AxisTrajectoryGenerator import AxisTrajectoryGenerator
 from CartesianTrajectoryGenerator import CartesianTrajectoryGenerator
 from KdlHelpers import *
+import surveillance
 
 
 class IIwaKinematics:
@@ -24,6 +25,13 @@ class IIwaKinematics:
 
         self.max_lin_speed = 1
         self.max_lin_accel = 4
+
+        # Konstanten fuer Sicherheitskonzept Berechnungen
+        self.ROBOT_CENTER_X = 72 # Mittelpunkt vom Roboter geschaetzt
+        self.ROBOT_CENTER_Y = 62
+        self.PRECISION_ROBOT = 0.0001 # 0.1mm laut Datenblatt
+        self.PRECISION_CAMERA = 0.05 # jeder Pixel deckt 2.5cm ab
+
         self.ptp_traj_gen = AxisTrajectoryGenerator(self.max_speeds, self.max_accels)
         self.lin_traj_gen = CartesianTrajectoryGenerator(self.max_lin_speed, self.max_lin_accel)
         self.copeliaSimConnector = copeliaSimConnector
@@ -88,12 +96,25 @@ class IIwaKinematics:
                                             / self.copeliaSimConnector.get_dt()
 
     def _publish_joint_pose(self, msg):
-        while not self.safety_ok:
-            self.copeliaSimConnector.step()
+        matrice_human = np.copy(surveillance.human)
+        current_pose = self.get_current_cartesian_tcp_pose() # aktuelle kartesische Position
+        matrice_position_robot = self.get_matrice_position_robot(current_pose.p) # tcp Position Matrix
+        matrice_position_obst = self.get_nearest_obstacle(np.array(matrice_human), matrice_position_robot) # Mensch Position Matrix
 
-        self.check_joint_poses(msg.position)
-        self.joint_pub.publish(msg)
-        self.copeliaSimConnector.step()
+        if matrice_position_obst[0] != -1: # wenn Hindernis gefunden
+            next_pose = self.get_cartesian_tcp_pose(msg.position) # kartesische Position fuer naechsten Schritt
+            is_safe = self.check_motion_dangerous(current_pose.p, next_pose.p,
+                                   np.multiply(np.subtract(matrice_position_obst, np.array([self.ROBOT_CENTER_X, self.ROBOT_CENTER_Y])) * 0.025, [-1, 1]))
+            self.safety_ok = is_safe
+        else:
+            self.safety_ok = True
+
+        if not self.safety_ok:
+            self.copeliaSimConnector.step()
+        else:
+            self.check_joint_poses(msg.position)
+            self.joint_pub.publish(msg)
+            self.copeliaSimConnector.step()
 
     def safety_stop(self, state):
         self.safety_ok = not state
@@ -102,6 +123,11 @@ class IIwaKinematics:
         current_pose = PyKDL.Frame()
         self.FKSolver.JntToCart(list_to_jntArray(self.current_joint_poses), current_pose)
         return current_pose
+
+    def get_cartesian_tcp_pose(self, joint_poses):
+        pose = PyKDL.Frame()
+        self.FKSolver.JntToCart(list_to_jntArray(joint_poses), pose)
+        return pose
 
     def ptp(self, dest_frame, speed=1.0):
         if speed > 1:
@@ -170,3 +196,58 @@ class IIwaKinematics:
 
         for frame in frames:
             simple_ptp(frame)
+
+    def check_motion_dangerous(self, base, vec1, vec2):
+        x_base, y_base, z_base = base
+        base = np.array([x_base, y_base])
+        x_vec1, y_vec1, z_vec1 = vec1
+        vec1 = np.array([x_vec1, y_vec1])
+
+        vec1 = np.subtract(vec1, base)  # Berechne Winkel zwischen Vektoren
+        vec2 = np.subtract(vec2, base)
+
+        dot = np.dot(vec1, vec2)
+        x_length = np.sqrt((vec1 * vec1).sum())
+        y_length = np.sqrt((vec2 * vec2).sum())
+
+        angle = 0
+        if x_length != 0 and y_length != 0:
+            cos_angle = float(dot) / float(x_length) / float(y_length)
+            angle = np.arccos(cos_angle)  # bogenmass
+        distance_traveled = np.cos(angle) * x_length # Distanz in Menschen Richtung
+
+        # ISO Formel
+        s_t = y_length # Distanz zum Menschen
+        k_h = 0.8 # Menschengeschwindigkeit konstant # ToDo
+        k_r = distance_traveled # bereits integriert
+        t_r = 0 # stopp wird sofort eingeleitet bei Gefahrenerkennung
+        t_b = 0 # ToDO
+        c = 0 # Kamera erkennt theoretisch alle Koerperteile
+        z_r = self.PRECISION_ROBOT # Datenblatt
+        z_s = self.PRECISION_CAMERA # Pixelgenauigkeit
+
+        tol = 0.2 # eigene zusaetzliche Sicherheitstoleranz
+
+        return s_t >= k_r + c + z_r + z_s + tol
+
+
+    def get_matrice_position_robot(self, pose): # berechnet tcp posi in Matrix
+        tcp_x, tcp_y, trash = pose
+        matrice_pos_robot = np.add(np.round(np.array([-tcp_x, tcp_y]) * 40), [self.ROBOT_CENTER_X, self.ROBOT_CENTER_Y])
+        return matrice_pos_robot
+
+    def get_nearest_obstacle(self, obst_matrice, matrice_pos_robot): # sucht nach naechstem Menschen
+        min_dist = 200
+        matrice_pos_obst = [-1, -1]
+        for y in xrange(0, 128):
+            if 33 <= y <= 56:
+                continue
+            for x in xrange(0, 128):
+                if obst_matrice[x, y] >= 6.0:    # bei bedarf anpassen
+                    dist = np.abs(x - matrice_pos_robot[0]) + np.abs(y - matrice_pos_robot[1])
+                    if dist < min_dist:
+                        min_dist = dist
+                        matrice_pos_obst = np.array([x, y])
+        return matrice_pos_obst
+
+

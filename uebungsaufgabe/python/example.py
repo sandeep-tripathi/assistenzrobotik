@@ -38,8 +38,9 @@ def image_callback(image_msg):
     global imageRecieved
     global image
     image = CvBridge().imgmsg_to_cv2(image_msg, desired_encoding="passthrough")
-    plt.imshow(image)
+    #plt.imshow(image)
     imageRecieved = True
+
 
 objectDetected = False
 imageRecieved = False
