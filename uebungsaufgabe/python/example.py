@@ -7,6 +7,7 @@ from TensorflowModel import TFmodel
 import PyKDL
 import numpy as np
 import surveillance
+import random
 
 import matplotlib.pyplot as plt
 
@@ -19,6 +20,7 @@ from sensor_msgs.msg import Image
 connector = CoppeliaSimConnector()
 kin = IIwaKinematics(connector)
 tfm = TFmodel()
+surveillance.kin = kin
 
 
 def transform_to_kdl(t):
@@ -46,7 +48,8 @@ objectDetected = False
 imageRecieved = False
 sensor = rospy.Subscriber('/objectDetected', Bool, sensor_callback)
 gripper = rospy.Publisher('/gripperClosing', Bool, queue_size=2, latch=False)
-image = rospy.Subscriber('/cameraVision', Image, image_callback)
+image = None
+imageSubscriber = rospy.Subscriber('/cameraVision', Image, image_callback)
 surveillance = rospy.Subscriber('/surveillance', Image, surveillance.surveillance_callback)
 
 rot = PyKDL.Rotation()
@@ -68,9 +71,13 @@ while True:
     gripper.publish(True)
     connector.step()
 
-    predictions = tfm.predict_from_image(image)
-    print(predictions)
-    image_type = np.argmax(predictions)
+    connector.step()
+    #while image == None:
+    #    connector.step()
+    #predictions = tfm.predict_from_image(image)
+    #print(predictions)
+    #image_type = np.argmax(predictions)
+    image_type = random.randrange(3)
 
     # Middle Sink: kin.ptp(PyKDL.Frame(rot, PyKDL.Vector(0.25, -0.48, 0.225)), 1.0)
     # Left Sink:

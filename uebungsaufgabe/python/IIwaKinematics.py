@@ -107,7 +107,7 @@ class IIwaKinematics:
                                    np.multiply(np.subtract(matrice_position_obst, np.array([self.ROBOT_CENTER_X, self.ROBOT_CENTER_Y])) * 0.025, [-1, 1]))
             self.safety_ok = is_safe
         else:
-            self.safety_ok = True
+            self.safety_ok = surveillance.emergency
 
         if not self.safety_ok:
             self.copeliaSimConnector.step()
@@ -132,6 +132,8 @@ class IIwaKinematics:
     def ptp(self, dest_frame, speed=1.0):
         if speed > 1:
             speed = 1.0
+
+        surveillance.steps = 0
 
         target_joint_poses = PyKDL.JntArray(self.chain.getNrOfJoints())
         start_config = list_to_jntArray(self.current_joint_poses)
@@ -159,6 +161,8 @@ class IIwaKinematics:
     def lin(self, dest_frame, speed=1.0):
         if speed > 1:
             speed = 1.0
+
+        surveillance.steps = 0
 
         def simple_ptp(dest_frame):
             target_joint_poses = PyKDL.JntArray(self.chain.getNrOfJoints())
