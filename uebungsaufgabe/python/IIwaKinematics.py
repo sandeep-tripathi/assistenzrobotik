@@ -218,17 +218,17 @@ class IIwaKinematics:
 
         # ISO Formel
         s_t = y_length # Distanz zum Menschen
-        k_h = 0.8 # Menschengeschwindigkeit konstant # ToDo
+        k_h = 0.05 * 1.0 # Menschengeschwindigkeit konstant # ToDo
         k_r = distance_traveled # bereits integriert
         t_r = 0 # stopp wird sofort eingeleitet bei Gefahrenerkennung
-        t_b = 0 # ToDO
+        t_b = 0 # dazu finde ich nichts
         c = 0 # Kamera erkennt theoretisch alle Koerperteile
         z_r = self.PRECISION_ROBOT # Datenblatt
         z_s = self.PRECISION_CAMERA # Pixelgenauigkeit
 
         tol = 0.2 # eigene zusaetzliche Sicherheitstoleranz
 
-        return s_t >= k_r + c + z_r + z_s + tol
+        return s_t >= k_h + k_r + c + z_r + z_s + tol
 
 
     def get_matrice_position_robot(self, pose): # berechnet tcp posi in Matrix
@@ -243,7 +243,7 @@ class IIwaKinematics:
             if 33 <= y <= 56:
                 continue
             for x in xrange(0, 128):
-                if obst_matrice[x, y] >= 6.0:    # bei bedarf anpassen
+                if obst_matrice[x, y] >= 4.0:    # bei bedarf anpassen
                     dist = np.abs(x - matrice_pos_robot[0]) + np.abs(y - matrice_pos_robot[1])
                     if dist < min_dist:
                         min_dist = dist
